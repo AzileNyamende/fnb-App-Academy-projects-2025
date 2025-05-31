@@ -1,0 +1,71 @@
+body {
+    background-color: #44531b;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 images per row */
+    gap: 20px;
+    padding: 40px;
+    max-width: 1000px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 400px; /* Increased height */
+    object-fit: cover; /* Keep image ratio while covering the box */
+    border: 4px solid #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+    border-color: rgb(84, 90, 69);
+}
+
+/* Menu Bar Styling */
+#menu {
+  width: 100%;
+  height: 40px;
+  background-color: rgb(108, 129, 168);
+  padding-top: 12px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+#menu a {
+  color: #ffffff;
+  font-family: Helvetica, sans-serif;
+  font-size: 18px;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0 20px;
+}
+
+#menu a:hover {
+  color: #5077bd;
+}
+
+/* Adjust body to account for fixed menu */
+body {
+  padding-top: 60px; /* Space for fixed menu */
+  background-color: #44531b;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+}
